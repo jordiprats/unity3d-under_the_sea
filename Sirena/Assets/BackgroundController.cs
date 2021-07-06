@@ -11,7 +11,7 @@ public class BackgroundController : MonoBehaviour{
 
     void Start(){
         mainCamera = gameObject.GetComponent<Camera>();
-        screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
+        screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width+200, Screen.height, mainCamera.transform.position.z));
         foreach(GameObject obj in levels){
             loadChildObjects(obj);
         }

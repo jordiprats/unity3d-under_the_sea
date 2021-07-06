@@ -17,10 +17,11 @@ public class PlayerMov : MonoBehaviour
 	{
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 		verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
+		
 	}
 
 	void FixedUpdate ()
 	{
-		controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
+		controller.Move(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime);
 	}
 }
