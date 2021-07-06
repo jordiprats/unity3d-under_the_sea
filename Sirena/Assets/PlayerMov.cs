@@ -16,12 +16,16 @@ public class PlayerMov : MonoBehaviour
 	void Update ()
 	{
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-		verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
-		
+		verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;	
 	}
 
 	void FixedUpdate ()
 	{
 		controller.Move(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime);
+		GameObject.Find("/player/xfollower").transform.position=new Vector3(GameObject.Find("/player").transform.position.x, 0, GameObject.Find("/player").transform.position.z);
+
+		Vector3 pos = transform.position;
+		pos.y =  Mathf.Clamp(transform.position.y, -4.4f , 3.9f);
+     	transform.position = pos;
 	}
 }
