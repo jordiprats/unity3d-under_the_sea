@@ -47,6 +47,8 @@ public class MovPeix : MonoBehaviour {
         {
             Destroy(this.gameObject);
 
+            collision.gameObject.GetComponent<PlayerMov>().HitSound();
+
             GameObject cointracker = GameObject.Find("/ui/coins");
 
             if (cointracker.GetComponent<coinUpdater>().coins<50)
