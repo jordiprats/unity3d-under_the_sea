@@ -18,6 +18,11 @@ public class scoreUpdater : MonoBehaviour
     // Update is called once per frame
 	void Update ()
     {
-		scoreText.text = player.transform.position.x.ToString("0");
+        if (player.transform.position.x > 0)
+        {
+            scoreText.text = "Distància: " + player.transform.position.x.ToString("0");
+        }
+        else scoreText.text = "Distància: 0";
+		
 	}
 }

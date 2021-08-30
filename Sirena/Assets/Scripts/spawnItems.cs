@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnPeixos : MonoBehaviour {
-    public GameObject[] peixosPrefab;
+public class spawnItems : MonoBehaviour {
+    public GameObject[] itemsPrefab;
     public float respawnTime = 1.0f;
     private Vector2 screenBounds;
 
@@ -11,26 +11,22 @@ public class spawnPeixos : MonoBehaviour {
     void Start ()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        StartCoroutine(peixWave());
+        StartCoroutine(itemWave());
     }
-    private void newWavePeixos()
+    private void newWaveitems()
     {
-        foreach(GameObject peixPrefab in peixosPrefab)
+        foreach(GameObject itemPrefab in itemsPrefab)
         {
-            GameObject a = Instantiate(peixPrefab) as GameObject;
+            GameObject a = Instantiate(itemPrefab) as GameObject;
             a.transform.position = new Vector2(GameObject.Find("/peix_spawner").transform.position.x+Random.Range(0,15), Random.Range(-screenBounds.y, screenBounds.y));
-
-            MovPeix mp = a.GetComponent<MovPeix>();
-
-            mp.speed = Random.Range(2,10);
         }
     }
-    IEnumerator peixWave()
+    IEnumerator itemWave()
     {
         while(true)
         {
             yield return new WaitForSeconds(respawnTime);
-            newWavePeixos();
+            newWaveitems();
         }
     }
 }
