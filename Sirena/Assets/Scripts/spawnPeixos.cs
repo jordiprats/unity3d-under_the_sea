@@ -22,7 +22,8 @@ public class spawnPeixos : MonoBehaviour {
 
             MovPeix mp = a.GetComponent<MovPeix>();
 
-            mp.speed = Random.Range(2,10);
+            GameObject player = GameObject.Find("/player/xfollower");
+            mp.speed = Random.Range(2,10) + 1*(player.transform.position.x/300);
         }
     }
     IEnumerator peixWave()
