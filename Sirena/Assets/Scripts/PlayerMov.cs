@@ -23,10 +23,11 @@ public class PlayerMov : MonoBehaviour
 
 	void Start ()
 	{
-			rb = this.GetComponent<Rigidbody2D>();
-			rb.velocity = new Vector2(-speed, 0);
-			this.coin_sound = (AudioClip)Resources.Load("sounds/coin", typeof(AudioClip));
-			this.hit_sound = (AudioClip)Resources.Load("sounds/hit", typeof(AudioClip));
+		Time.timeScale = 1;
+		rb = this.GetComponent<Rigidbody2D>();
+		rb.velocity = new Vector2(-speed, 0);
+		this.coin_sound = (AudioClip)Resources.Load("sounds/coin", typeof(AudioClip));
+		this.hit_sound = (AudioClip)Resources.Load("sounds/hit", typeof(AudioClip));
 	}
 
 	// Update is called once per frame
