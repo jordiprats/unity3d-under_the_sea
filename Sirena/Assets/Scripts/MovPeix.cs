@@ -52,56 +52,35 @@ public class MovPeix : MonoBehaviour {
 
             GameObject cointracker = GameObject.Find("/ui/coins");
 
+            int monedes_a_restar = 0;
+
             if (cointracker.GetComponent<coinUpdater>().coins<30)
             {
-                cointracker.GetComponent<coinUpdater>().coins -= 3;
-
-                LoseCoin(1);
-                LoseCoin(1);
-                LoseCoin(1);
+                monedes_a_restar = 3;
             }
             else if (cointracker.GetComponent<coinUpdater>().coins<60)
             {
-                cointracker.GetComponent<coinUpdater>().coins -= 9;
-
-                LoseCoin(3);
-                LoseCoin(2);
-                LoseCoin(1);
-                LoseCoin(1);
-                LoseCoin(1);
-                LoseCoin(1);
+                monedes_a_restar = 9;
             }
             else if (cointracker.GetComponent<coinUpdater>().coins<160)
             {
-                cointracker.GetComponent<coinUpdater>().coins -= 30;
-
-                LoseCoin(10);
-                LoseCoin(10);
-                LoseCoin(4);
-                LoseCoin(3);
-                LoseCoin(1);
-                LoseCoin(2);
+                monedes_a_restar = 30;
+            }
+            else if (cointracker.GetComponent<coinUpdater>().coins<600)
+            {
+                monedes_a_restar = 60;              
             }
             else
             {
-                cointracker.GetComponent<coinUpdater>().coins -= 60;
-
-                LoseCoin(10);
-                LoseCoin(10);
-                LoseCoin(10);
-                LoseCoin(10);
-                LoseCoin(10);
-                LoseCoin(4);                
-                LoseCoin(1);                
-                LoseCoin(1);                
-                LoseCoin(1);                
-                LoseCoin(1);                
-                LoseCoin(1);                
-                LoseCoin(1);                
+                monedes_a_restar = 100;
             }
 
-            if (cointracker.GetComponent<coinUpdater>().coins<0)
+            if (cointracker.GetComponent<coinUpdater>().coins-monedes_a_restar<0)
             {
+                for(int i = 0; i < cointracker.GetComponent<coinUpdater>().coins; i++)
+                {
+                    LoseCoin(1);
+                }
                 Time.timeScale = 0;
                 cointracker.GetComponent<coinUpdater>().coins = 0;
                 GameObject.Find("/peix_spawner").GetComponent<AudioSource>().mute = true;
@@ -112,8 +91,69 @@ public class MovPeix : MonoBehaviour {
             else
             {
                 Destroy(this.gameObject);
-            }
+                if (cointracker.GetComponent<coinUpdater>().coins<30)
+                {
+                    cointracker.GetComponent<coinUpdater>().coins -= 3; 
 
+                    LoseCoin(1);
+                    LoseCoin(1);
+                    LoseCoin(1);
+                }
+                else if (cointracker.GetComponent<coinUpdater>().coins<60)
+                {
+                    cointracker.GetComponent<coinUpdater>().coins -= 9;
+
+                    LoseCoin(3);
+                    LoseCoin(2);
+                    LoseCoin(1);
+                    LoseCoin(1);
+                    LoseCoin(1);
+                    LoseCoin(1);
+                }
+                else if (cointracker.GetComponent<coinUpdater>().coins<160)
+                {
+                    cointracker.GetComponent<coinUpdater>().coins -= 30;
+
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(4);
+                    LoseCoin(3);
+                    LoseCoin(1);
+                    LoseCoin(2);
+                }
+                else if (cointracker.GetComponent<coinUpdater>().coins<600)
+                {
+                    cointracker.GetComponent<coinUpdater>().coins -= 60;
+
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(4);                
+                    LoseCoin(1);                
+                    LoseCoin(1);                
+                    LoseCoin(1);                
+                    LoseCoin(1);                
+                    LoseCoin(1);                
+                    LoseCoin(1);                
+                }
+                else
+                {
+                    cointracker.GetComponent<coinUpdater>().coins -= 100;
+
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                    LoseCoin(10);
+                }
+            }
         }
     }
 
