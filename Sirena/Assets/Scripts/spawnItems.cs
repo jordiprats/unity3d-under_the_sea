@@ -18,7 +18,7 @@ public class spawnItems : MonoBehaviour {
         foreach(GameObject itemPrefab in itemsPrefab)
         {
             GameObject a = Instantiate(itemPrefab) as GameObject;
-            a.transform.position = new Vector2(GameObject.Find("/peix_spawner").transform.position.x+Random.Range(0,15), Random.Range(-screenBounds.y, screenBounds.y));
+            a.transform.position = new Vector2(GameObject.Find("/spawner").transform.position.x+Random.Range(0,15), Random.Range(-screenBounds.y, screenBounds.y));
         }
     }
     IEnumerator itemWave()

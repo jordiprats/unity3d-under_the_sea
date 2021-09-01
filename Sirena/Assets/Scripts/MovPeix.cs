@@ -20,7 +20,7 @@ public class MovPeix : MonoBehaviour {
         rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-speed, 0);
 
-        if(transform.position.x+40 < GameObject.Find("/peix_spawner").transform.position.x )
+        if(transform.position.x+40 < GameObject.Find("/spawner").transform.position.x )
         {
             Destroy(this.gameObject);
         }
@@ -83,7 +83,7 @@ public class MovPeix : MonoBehaviour {
                 }
                 Time.timeScale = 0;
                 cointracker.GetComponent<coinUpdater>().coins = 0;
-                GameObject.Find("/peix_spawner").GetComponent<AudioSource>().mute = true;
+                GameObject.Find("/spawner").GetComponent<AudioSource>().mute = true;
                 GameObject.Find("/player").GetComponent<AudioSource>().PlayOneShot((AudioClip)Resources.Load("sounds/death", typeof(AudioClip)));
 
                 StartCoroutine(WaitForSceneLoad());
