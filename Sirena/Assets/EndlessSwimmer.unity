@@ -1600,6 +1600,7 @@ GameObject:
   - component: {fileID: 1365184952}
   - component: {fileID: 1365184953}
   - component: {fileID: 1365184954}
+  - component: {fileID: 1365184955}
   m_Layer: 6
   m_Name: spawner
   m_TagString: Untagged
@@ -1767,6 +1768,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgsPrefab:
   - {fileID: 2011187789003236327, guid: 57f6e57a9f530577fb7d1128e5442bbc, type: 3}
+  respawnTime: 20
+--- !u!114 &1365184955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365184949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2853e06431aa7496b7bae9311638b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seaweedsPrefab:
+  - {fileID: 790731572138325854, guid: 8bad3ed9987799fcaadeb1cc48d49783, type: 3}
   respawnTime: 1
 --- !u!1 &1432614738
 GameObject:
