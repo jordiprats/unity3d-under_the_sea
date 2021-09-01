@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5904678478062602507}
   - component: {fileID: 5904678478062602506}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5904678478412339306}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5904678479583535327}
   - component: {fileID: 5904678479583535326}
   - component: {fileID: 5904678479583535296}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: peix_verd
   m_TagString: Untagged
   m_Icon: {fileID: 0}

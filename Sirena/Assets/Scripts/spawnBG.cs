@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spawnBG : MonoBehaviour {
     public GameObject[] bgsPrefab;
-    public float respawnTime = 1.0f;
+    public float respawnTime = 15.0f;
     private Vector2 screenBounds;
 
     // Use this for initialization
@@ -18,7 +18,7 @@ public class spawnBG : MonoBehaviour {
         foreach(GameObject bgPrefab in bgsPrefab)
         {
             GameObject a = Instantiate(bgPrefab) as GameObject;
-            a.transform.position = new Vector2(GameObject.Find("/spawner").transform.position.x+Random.Range(0,15), Random.Range(-screenBounds.y, screenBounds.y));
+            a.transform.position = new Vector3(GameObject.Find("/spawner").transform.position.x+Random.Range(0,15), a.transform.position.y, a.transform.position.z);
         }
     }
     IEnumerator bgWave()

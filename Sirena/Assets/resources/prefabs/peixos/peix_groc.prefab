@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7877795574928650751}
   - component: {fileID: 7877795574928650750}
   - component: {fileID: 7877795574928650720}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: peix_groc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7877795575162537175}
   - component: {fileID: 7877795575162537174}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7877795575216773269}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

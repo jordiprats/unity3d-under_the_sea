@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4068094918220948474}
   - component: {fileID: 6723466895560554847}
   - component: {fileID: 5383707402648252884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: moneda_2
   m_TagString: 2
   m_Icon: {fileID: 0}
@@ -136,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 773ad911391b75953af7f4e27422f8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saw: {fileID: 0}
 --- !u!82 &5383707402648252884
 AudioSource:
   m_ObjectHideFlags: 0
