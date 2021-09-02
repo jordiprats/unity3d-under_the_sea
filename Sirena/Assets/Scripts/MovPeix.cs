@@ -85,6 +85,9 @@ public class MovPeix : MonoBehaviour {
                 cointracker.GetComponent<coinUpdater>().coins = 0;
                 GameObject.Find("/spawner").GetComponent<AudioSource>().mute = true;
                 GameObject.Find("/player").GetComponent<AudioSource>().PlayOneShot((AudioClip)Resources.Load("sounds/death", typeof(AudioClip)));
+                GameObject.Find("/player").GetComponent<PlayerMov>().isDead = true;
+
+                GameObject.Find("/gameovercanvas").GetComponent<Canvas>().enabled = true;
 
                 StartCoroutine(WaitForSceneLoad());
             }

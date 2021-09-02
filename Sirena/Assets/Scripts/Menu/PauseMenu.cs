@@ -54,7 +54,7 @@ public class PauseMenu : MonoBehaviour
 
 	public void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.Escape))
+		if(Input.GetKeyDown(KeyCode.Escape) && !GameObject.Find("/player").GetComponent<PlayerMov>().isDead)
 		{
 			isPaused = true;
 			setPauseStatus();

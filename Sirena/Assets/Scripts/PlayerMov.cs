@@ -19,10 +19,13 @@ public class PlayerMov : MonoBehaviour
 	public AudioClip hit_sound;
 	public AudioClip coin_sound;
 
+	public bool isDead = false;
+
 	private Vector2 touchOrigin = -Vector2.one;
 
 	void Start ()
 	{
+		isDead = false;
 		Time.timeScale = 1;
 		rb = this.GetComponent<Rigidbody2D>();
 		rb.velocity = new Vector2(-speed, 0);
