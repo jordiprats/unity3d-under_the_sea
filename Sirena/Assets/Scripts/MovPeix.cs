@@ -20,7 +20,7 @@ public class MovPeix : MonoBehaviour {
         rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(-speed, 0);
 
-        if(transform.position.x+40 < GameObject.Find("/spawner").transform.position.x )
+        if(transform.position.x+30 < GameObject.Find("/spawner").transform.position.x )
         {
             Destroy(this.gameObject);
         }

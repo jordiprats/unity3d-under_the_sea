@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011187789003236329}
   - component: {fileID: 2011187789003236328}
+  - component: {fileID: 1165771868262504122}
   m_Layer: 6
   m_Name: cova
   m_TagString: Untagged
@@ -83,3 +84,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1165771868262504122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011187789003236327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532dd633859510b218c8985d14aa0ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

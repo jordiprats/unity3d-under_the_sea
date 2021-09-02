@@ -19,7 +19,7 @@ public class Coin : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
 
-        if((transform.position.x+40 < GameObject.Find("/").transform.position.x ) || (transform.position.y < -30))
+        if((transform.position.x+30 < GameObject.Find("/").transform.position.x ) || (transform.position.y < -30))
         {
             Destroy(this.gameObject);
         }
