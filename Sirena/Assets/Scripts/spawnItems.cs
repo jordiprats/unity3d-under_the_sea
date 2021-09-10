@@ -25,8 +25,8 @@ public class spawnItems : MonoBehaviour {
     {
         while(true)
         {
-            yield return new WaitForSeconds(respawnTime);
             newWaveitems();
+            yield return new WaitForSeconds(respawnTime);
         }
     }
 }

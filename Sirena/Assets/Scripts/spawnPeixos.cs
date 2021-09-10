@@ -15,15 +15,18 @@ public class spawnPeixos : MonoBehaviour {
     }
     private void newWavePeixos()
     {
-        foreach(GameObject peixPrefab in peixosPrefab)
+        if (this.transform.position.x > 40)
         {
-            GameObject a = Instantiate(peixPrefab) as GameObject;
-            a.transform.position = new Vector2(GameObject.Find("/spawner").transform.position.x+Random.Range(0,15), Random.Range(-screenBounds.y, screenBounds.y));
+            foreach(GameObject peixPrefab in peixosPrefab)
+            {
+                GameObject a = Instantiate(peixPrefab) as GameObject;
+                a.transform.position = new Vector2(GameObject.Find("/spawner").transform.position.x+Random.Range(0,15), Random.Range(-screenBounds.y, screenBounds.y));
 
-            MovPeix mp = a.GetComponent<MovPeix>();
+                MovPeix mp = a.GetComponent<MovPeix>();
 
-            GameObject player = GameObject.Find("/player/xfollower");
-            mp.speed = Random.Range(2,10) + 1*(player.transform.position.x/300);
+                GameObject player = GameObject.Find("/player/xfollower");
+                mp.speed = Random.Range(2,10) + 1*(player.transform.position.x/600);
+            }
         }
     }
     IEnumerator peixWave()
